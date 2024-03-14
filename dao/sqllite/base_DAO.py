@@ -26,16 +26,16 @@ class BaseDAO:
         self._session_maker = sessionmaker(engine)
 
     def _create_tables(self):
-        self._switch_engine_echo()
+        # self._switch_engine_echo()
         Base.metadata.create_all(self._engine)
         self.logger.debug("Tables were created")
-        self._switch_engine_echo()
+        # self._switch_engine_echo()
 
     def _drop_tables(self):
-        self._switch_engine_echo()
+        # self._switch_engine_echo()
         Base.metadata.drop_all(self._engine)
         self.logger.debug("Tables were dropped")
-        self._switch_engine_echo()
+        # self._switch_engine_echo()
 
     def _switch_engine_echo(self):
         if self._engine.echo:

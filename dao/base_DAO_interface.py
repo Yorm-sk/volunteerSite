@@ -5,7 +5,7 @@ from models.base import Base
 
 class BaseDAOInterface(ABC):
     @abstractmethod
-    def get_entity(self, ent_id: int):
+    def get_entity_by_id(self, ent_id: int):
         pass
 
     @abstractmethod
